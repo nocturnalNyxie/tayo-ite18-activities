@@ -45,6 +45,24 @@ scene.add(spotLight.target)
 
 
 /**
+ * Light Helpers
+ */
+const hemisphereLightHelper = new THREE.HemisphereLightHelper(hemisphereLight, 0.2)
+scene.add(hemisphereLightHelper)
+
+const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 0.2)
+scene.add(directionalLightHelper)
+
+const pointLightHelper = new THREE.PointLightHelper(pointLight, 0.2)
+scene.add(pointLightHelper)
+
+const spotLightHelper = new THREE.SpotLightHelper(spotLight)
+scene.add(spotLightHelper)
+
+// Update Spotlight helper position in your animation loop if needed
+spotLightHelper.update()
+
+/**
  * Objects
  */
 // Material
